@@ -18,6 +18,7 @@ jobs:
       run: |
         git fetch
         git checkout feature
+        git pull origin feature --allow-unrelated-histories
         git merge --squash origin/bugfix
         git push origin feature
 #check
