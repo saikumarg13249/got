@@ -18,6 +18,8 @@ jobs:
       run: |
         git fetch
         git checkout bugfix
+        git rebase main
         git checkout feature
+        git rebase main
         git merge bugfix
 #check
