@@ -19,5 +19,5 @@ jobs:
         git fetch
         git checkout feature
         git merge bugfix
-        git push origin feature
+        git push feature
 #check
