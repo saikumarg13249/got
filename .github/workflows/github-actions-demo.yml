@@ -17,7 +17,7 @@ jobs:
     - name: Merge bugfix to feature
       run: |
         git fetch
+        git checkout bugfix
         git checkout feature
         git merge bugfix
-        git push feature
 #check
