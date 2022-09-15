@@ -16,6 +16,7 @@ jobs:
           git config --local user.name "saikumarg13249"
     - name: Merge bugfix to feature
       run: |
+        git fetch
         git checkout feature
         git merge --squash origin/bugfix
         git push origin feature
