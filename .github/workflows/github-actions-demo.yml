@@ -17,5 +17,6 @@ jobs:
     - name: Merge bugfix to feature
       run: |
         git fetch origin
+        git branch
         git checkout origin/feature
         git merge origin/bugfix
