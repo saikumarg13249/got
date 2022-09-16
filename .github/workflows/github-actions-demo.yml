@@ -20,3 +20,4 @@ jobs:
         git branch
         git checkout origin/dev
         git merge origin/bugfix
+#check
