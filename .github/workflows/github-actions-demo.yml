@@ -19,5 +19,6 @@ jobs:
         git fetch origin
         git branch
         git checkout origin/dev
+        git pull origin bugfix --allow-unrelated-histories
         git merge origin/bugfix
 #check
