@@ -26,9 +26,11 @@ jobs:
           do 
           if[$word == "#hotfix"] 
           then
+            echo "condition passed"
             git checkout release
             git pull
             git merge --no-ff main -m "Auto-merge main back to release"
             git push
+          fi
           done
           done <<< "$output"
