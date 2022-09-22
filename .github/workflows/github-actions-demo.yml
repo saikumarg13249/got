@@ -17,8 +17,9 @@ jobs:
     - name: Merge main back to release
       run: |
           git fetch --unshallow
+          git checkout main
+          git log
           git checkout release
           git pull
-          git log
           git merge --no-ff main -m "Auto-merge main back to release"
           git push
