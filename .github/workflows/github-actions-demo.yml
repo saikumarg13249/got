@@ -34,3 +34,4 @@ jobs:
             fi
           done
           done <<< "$output"
+          #check
