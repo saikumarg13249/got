@@ -19,5 +19,6 @@ jobs:
           git fetch --unshallow
           git checkout release
           git pull
+          git log -1
           git merge --no-ff main -m "Auto-merge main back to release"
           git push
