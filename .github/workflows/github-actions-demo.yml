@@ -22,6 +22,10 @@ jobs:
           while read line 
           do
           echo "$line"
+            for word in $line
+            do 
+              echo -e $word
+            done
           done <<< "$output"
           git checkout release
           git pull
