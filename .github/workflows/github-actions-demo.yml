@@ -22,13 +22,13 @@ jobs:
           while read line 
           do
           echo "$line"
-            for word in $line
-            do 
-            if[$word == "#hotfix"]; 
-            then
-            git checkout release
-            git pull
-            git merge --no-ff main -m "Auto-merge main back to release"
-            git push
-            done
+          for word in $line
+          do 
+          if[$word == "#hotfix"]; 
+          then
+          git checkout release
+          git pull
+          git merge --no-ff main -m "Auto-merge main back to release"
+          git push
+          done
           done <<< "$output"
