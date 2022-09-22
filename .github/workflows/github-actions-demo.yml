@@ -20,7 +20,7 @@ jobs:
           git checkout main
           output=$(git log -1 --pretty=%B)
           while IFS= read -r line; do
-            process "$line"
+             "$line"
           done <<< "$output"
           git checkout release
           git pull
