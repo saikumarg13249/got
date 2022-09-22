@@ -19,8 +19,9 @@ jobs:
           git fetch --unshallow
           git checkout main
           output=$(git log -1 --pretty=%B)
-          while IFS= read -r line; do
-             "$line"
+          while read line 
+          do
+          echo "$line"
           done <<< "$output"
           git checkout release
           git pull
