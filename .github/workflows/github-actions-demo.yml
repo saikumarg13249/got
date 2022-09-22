@@ -24,11 +24,11 @@ jobs:
           echo "$line"
             for word in $line
             do 
-              echo -e $word
+            if[$word == "#hotfix"] 
+            then
+            git checkout release
+            git pull
+            git merge --no-ff main -m "Auto-merge main back to release"
+            git push
             done
           done <<< "$output"
-          git checkout release
-          git pull
-          git merge --no-ff main -m "Auto-merge main back to release"
-          git push
-#check
