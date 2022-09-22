@@ -23,3 +23,4 @@ jobs:
           git pull
           git merge --no-ff main -m "Auto-merge main back to release"
           git push
+#check
